@@ -3,47 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MOIRA: NEXUS - Un RPG narrativo stagionale dove i destini convergono. Controlla il tuo fato in un mondo ispirato alla mitologia greca.">
-    <meta name="keywords" content="Minecraft RPG, Mitologia Greca, MOIRA, NEXUS, Narrative RPG, Stagioni">
+    <meta name="description" content="MOIRA: NEXUS - Un RPG narrativo stagionale concept dove i destini convergono. Un mondo ispirato alla mitologia greca.">
+    <meta name="keywords" content="Minecraft RPG Concept, Mitologia Greca, MOIRA, NEXUS, Narrative RPG">
     <title>MOIRA: NEXUS - Il Destino Converge</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Animated Background Lights -->
+    <div class="background-lights">
+        <div class="light light-1"></div>
+        <div class="light light-2"></div>
+        <div class="light light-3"></div>
+        <div class="light light-4"></div>
+        <div class="light light-5"></div>
+    </div>
+
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <a href="#" class="logo">
-                <span class="logo-title">🌌 <span class="brand-switcher">MOIRA: NEXUS</span></span>
+                🌌
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#lore">Lore</a></li>
                 <li><a href="#features">Meccaniche</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contatti</a></li>
+                <li><a href="#concept">Concept</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section with Animated Title -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="title-container">
-                <h1 class="title-animated">
-                    <span class="title-word active">MOIRA: NEXUS</span>
-                    <span class="title-word">Big Galaxy MC</span>
+                <h1 class="brand-title">
+                    <span class="brand-word moira-word">MOIRA:</span>
+                    <span class="brand-word nexus-word">NEXUS</span>
                 </h1>
             </div>
             <p class="hero-subtitle">Il destino non si segue. Si attraversa.</p>
             <p class="hero-description">Un RPG narrativo stagionale dove i destini convergono, le regole si spezzano e ogni scelta ha memoria.</p>
-            <button class="cta-btn">Entra nel Nexus</button>
+            <div class="hero-cta">
+                <button class="cta-btn">Scopri il Concept</button>
+            </div>
         </div>
     </section>
 
     <!-- Carousel Section -->
     <section id="gallery" class="gallery-section">
         <h2>Il Mondo del Nexus</h2>
+        <p class="section-subtitle">Sei divino influenza il gameplay in modo unico</p>
         <div class="carousel-container">
             <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
             
@@ -102,6 +113,7 @@
     <!-- Lore Section -->
     <section id="lore" class="lore-section">
         <h2>Il Fato dei Senza Moira</h2>
+        <p class="section-subtitle">Il cuore del concept narrativo</p>
         <div class="lore-grid">
             <div class="lore-card">
                 <div class="lore-icon">🧵</div>
@@ -129,6 +141,7 @@
     <!-- Features/Mechanics Section -->
     <section id="features" class="features-section">
         <h2>Le Meccaniche del Nexus</h2>
+        <p class="section-subtitle">Gameplay che genera narrativa</p>
         <div class="features-grid">
             <div class="feature-card feature-combat">
                 <h3>⚡ Combat Rituale</h3>
@@ -160,6 +173,7 @@
     <!-- Stagioni Section -->
     <section id="seasons" class="seasons-section">
         <h2>Le Stagioni del Destino</h2>
+        <p class="section-subtitle">Ogni ciclo è una frattura nel fato</p>
         <div class="seasons-container">
             <div class="season-card">
                 <div class="season-number">S1</div>
@@ -185,31 +199,31 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Entra nel Nexus</h2>
-        <div class="contact-items">
-            <div class="contact-item">
-                <h3>🎮 Server IP</h3>
-                <p>play.moira-nexus.mc:25565</p>
-                <p style="font-size: 0.9rem; color: #888; margin-top: 0.5rem;">(Clicca il bottone sopra per copiare)</p>
+    <!-- Concept/Disclaimer Section -->
+    <section id="concept" class="concept-section">
+        <h2>⚠️ Questo è un Concept</h2>
+        <div class="concept-content">
+            <div class="concept-card">
+                <h3>Visione Ambiziosa</h3>
+                <p>MOIRA: NEXUS rappresenta una visione complessa e ambiziosa per un RPG narrativo stagionale su Minecraft. Ogni meccanica, ogni stagione, e ogni dettaglio narrativo è soggetto a modifiche durante lo sviluppo.</p>
             </div>
-            <div class="contact-item">
-                <h3>💬 Discord</h3>
-                <p>Unisciti alla comunità del Nexus</p>
-                <a href="https://discord.gg/moira-nexus" target="_blank">Discord Server</a>
+            <div class="concept-card">
+                <h3>In Evoluzione</h3>
+                <p>Questo documento e questo sito rappresentano la versione attuale del concept. Elementi grafici, gameplay loop, sistemi di progressione e persino la struttura narrativa possono evolversi significativamente prima del lancio.</p>
             </div>
-            <div class="contact-item">
-                <h3>📧 Email</h3>
-                <p>info@moira-nexus.mc</p>
-                <a href="mailto:info@moira-nexus.mc">Contattaci</a>
+            <div class="concept-card">
+                <h3>Feedback e Collaborazione</h3>
+                <p>Siamo aperti a feedback, suggerimenti e critiche costruttive. Lo sviluppo di MOIRA: NEXUS è un processo iterativo che beneficia dal contributo della comunità.</p>
             </div>
+        </div>
+        <div class="disclaimer">
+            <p>💫 Tutto ciò che vedi qui è soggetto a significative modifiche. Nulla è finale finché non sarà ufficialmente annunciato come tale.</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 MOIRA: NEXUS. Il destino converge qui. | Dove i fili si intrecciano, il caos prende forma.</p>
+        <p>&copy; 2026 MOIRA: NEXUS - Concept in Development | Il destino converge qui.</p>
     </footer>
 
     <script src="script.js"></script>
