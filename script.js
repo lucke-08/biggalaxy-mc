@@ -1,17 +1,3 @@
-// Title Switcher Animation
-let titleIndex = 0;
-const titleWords = document.querySelectorAll('.title-word');
-const switchInterval = 6000; // Cambia ogni 6 secondi
-
-function switchTitle() {
-    titleWords.forEach(word => word.classList.remove('active'));
-    titleWords[titleIndex].classList.add('active');
-    titleIndex = (titleIndex + 1) % titleWords.length;
-}
-
-// Inizia l'animazione del titolo
-setInterval(switchTitle, switchInterval);
-
 // Carousel functionality
 let currentCarouselIndex = 0;
 const carouselItems = document.querySelectorAll('.carousel-item');
@@ -20,6 +6,10 @@ const totalItems = carouselItems.length;
 function updateCarousel() {
     const carousel = document.querySelector('.carousel');
     carousel.style.transform = `translateX(-${currentCarouselIndex * 100}%)`;
+    
+    carouselItems.forEach((item, index) => {
+        item.classList.toggle('active', index === currentCarouselIndex);
+    });
     
     // Update dots
     document.querySelectorAll('.dot').forEach((dot, index) => {
@@ -63,21 +53,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// CTA Button - Copy Server IP to Clipboard
+// CTA Button - Scroll to concept
 document.querySelector('.cta-btn').addEventListener('click', function() {
-    const serverIP = 'play.moira-nexus.mc:25565';
-    navigator.clipboard.writeText(serverIP).then(() => {
-        const originalText = this.textContent;
-        this.textContent = 'IP Copiato! ✓';
-        this.style.backgroundColor = '#00ff88';
-        
-        setTimeout(() => {
-            this.textContent = originalText;
-            this.style.backgroundColor = '';
-        }, 2000);
-    }).catch(err => {
-        console.error('Failed to copy:', err);
-        alert('Server IP: ' + serverIP);
+    const conceptSection = document.getElementById('concept');
+    conceptSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
     });
 });
 
@@ -97,13 +78,12 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-document.querySelectorAll('.feature-card, .lore-card, .season-card, .contact-item').forEach(card => {
+document.querySelectorAll('.feature-card, .lore-card, .season-card, .concept-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(card);
 });
 
-// Indice di Destino - Simulated player interaction tracker (future feature)
-let destinyIndex = 50; // 0-100 scale
-console.log('🔮 Indice di Destino iniziale:', destinyIndex);
+console.log('🌌 MOIRA: NEXUS - Concept Site Loaded');
+console.log('💫 Tutto ciò che vedi qui è soggetto a significative modifiche.');
